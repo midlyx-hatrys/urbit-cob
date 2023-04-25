@@ -40,6 +40,7 @@
           mmh3
         ;
       };
+      buildFlags = ["OPTFLAGS=-O3"];
       installFlags = ["PREFIX=$(out)"];
     };
   in {

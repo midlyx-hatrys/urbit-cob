@@ -1,9 +1,11 @@
-PREFIX := /usr
+PREFIX := /usr/local
+OPTFLAGS := -Og
 
 CC := gcc
-CFLAGS := -Wall -Wextra -Wpedantic -Wformat=2 -Wno-unused-parameter \
+BASE_CFLAGS := -Wall -Wextra -Wpedantic -Wformat=2 -Wno-unused-parameter \
        -Wshadow -Wstrict-prototypes -Wold-style-definition -Wredundant-decls \
-       -Wnested-externs -Wmissing-include-dirs -Og -g
+       -Wnested-externs -Wmissing-include-dirs -g
+CFLAGS := $(BASE_CFLAGS) $(OPTFLAGS)
 AR := ar
 LDLIBS := -lgmp -lmmh3
 
